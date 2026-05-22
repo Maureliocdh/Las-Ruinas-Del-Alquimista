@@ -1,0 +1,9 @@
+res://MainMenu.tscn
+res://GameOver.tscn
+res://level/interactable/flag/flag_3d.tscn
+res://game.tscn
+res://License.txt
+res://level/interactable/flag/flag_reached_screen.gd
+res://HUD.gd
+res://SupabaseManager.gd
+res://loading_screen.tscn

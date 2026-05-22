@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://b8jh7nwl7k5da"]
+
+[ext_resource type="Script" uid="uid://dqz2hkby8qb39" path="res://OptionsMenu.gd" id="1_4x8qy"]
+
+[node name="OptionsMenu" type="Control" unique_id=298124785]
+layout_mode = 3
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4x8qy")
+
+[node name="Panel" type="Panel" parent="." unique_id=2124847903]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2124847904]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -200.0
+offset_right = 250.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="VBoxContainer" unique_id=2124847905]
+layout_mode = 2
+text = "⚙️  OPCIONES"
+theme_override_font_sizes/font_size = 32
+
+[node name="MenuVolume" type="HBoxContainer" parent="VBoxContainer" unique_id=2124847906]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/MenuVolume" unique_id=2124847907]
+layout_mode = 2
+text = "Música Menú:"
+custom_minimum_size = Vector2(150, 0)
+
+[node name="MenuVolumeSlider" type="HSlider" parent="VBoxContainer/MenuVolume" unique_id=2124847908]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MenuValueLabel" type="Label" parent="VBoxContainer/MenuVolume" unique_id=2124847909]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 0)
+text = "0 dB"
+
+[node name="GameVolume" type="HBoxContainer" parent="VBoxContainer" unique_id=2124847910]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/GameVolume" unique_id=2124847911]
+layout_mode = 2
+text = "Música Juego:"
+custom_minimum_size = Vector2(150, 0)
+
+[node name="GameVolumeSlider" type="HSlider" parent="VBoxContainer/GameVolume" unique_id=2124847912]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameValueLabel" type="Label" parent="VBoxContainer/GameVolume" unique_id=2124847913]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 0)
+text = "0 dB"
+
+[node name="SFXVolume" type="HBoxContainer" parent="VBoxContainer" unique_id=2124847914]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/SFXVolume" unique_id=2124847915]
+layout_mode = 2
+text = "Efectos Sonido:"
+custom_minimum_size = Vector2(150, 0)
+
+[node name="SFXVolumeSlider" type="HSlider" parent="VBoxContainer/SFXVolume" unique_id=2124847916]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SFXValueLabel" type="Label" parent="VBoxContainer/SFXVolume" unique_id=2124847917]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 0)
+text = "0 dB"
+
+[node name="MasterVolume" type="HBoxContainer" parent="VBoxContainer" unique_id=2124847918]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/MasterVolume" unique_id=2124847919]
+layout_mode = 2
+text = "Volumen Maestro:"
+custom_minimum_size = Vector2(150, 0)
+
+[node name="MasterVolumeSlider" type="HSlider" parent="VBoxContainer/MasterVolume" unique_id=2124847920]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MasterValueLabel" type="Label" parent="VBoxContainer/MasterVolume" unique_id=2124847921]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 0)
+text = "0 dB"
+
+[node name="BackButton" type="Button" parent="VBoxContainer" unique_id=2124847922]
+layout_mode = 2
+size_flags_vertical = 4
+text = "← Volver"

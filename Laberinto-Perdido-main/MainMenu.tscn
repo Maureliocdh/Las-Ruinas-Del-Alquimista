@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://cws52euemy4hy"]
+
+[ext_resource type="Script" uid="uid://q6gwqb02piom" path="res://main_menu.gd" id="1_i26rj"]
+[ext_resource type="Texture2D" uid="uid://b11v2o7u71k5k" path="res://Portada.jpeg" id="2_h7a2f"]
+[ext_resource type="AudioStream" uid="uid://cyetuftoya6vh" path="res://MENU.wav" id="3_h7a2f"]
+
+[node name="MainMenu" type="Control" unique_id=1312322506]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_i26rj")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=438476549]
+layout_mode = 0
+offset_right = 1038.0
+offset_bottom = 716.0
+texture = ExtResource("2_h7a2f")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1957511509]
+layout_mode = 0
+offset_top = 534.0
+offset_right = 1038.0
+offset_bottom = 718.0
+alignment = 1
+
+[node name="NuevaPartida" type="Button" parent="VBoxContainer" unique_id=1565142767]
+layout_mode = 2
+text = "Nueva partida"
+
+[node name="DosJugadores" type="Button" parent="VBoxContainer" unique_id=358010659]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "2 Jugadores"
+
+[node name="CargarPartida" type="Button" parent="VBoxContainer" unique_id=1086950158]
+layout_mode = 2
+text = "Cargar partida"
+
+[node name="Opciones" type="Button" parent="VBoxContainer" unique_id=914604699]
+layout_mode = 2
+text = "Opciones"
+
+[node name="Salir" type="Button" parent="VBoxContainer" unique_id=734014735]
+layout_mode = 2
+text = "Salir"
+
+[node name="NameContainer" type="VBoxContainer" parent="." unique_id=1917863960]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 352.0
+offset_top = 374.0
+offset_right = 702.0
+offset_bottom = 530.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="LabelNombre" type="Label" parent="NameContainer" unique_id=4257817]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.93, 0.4, 1)
+theme_override_font_sizes/font_size = 17
+text = "Ingresa tu nombre para comenzar:"
+horizontal_alignment = 1
+
+[node name="NameInput" type="LineEdit" parent="NameContainer" unique_id=1514531429]
+custom_minimum_size = Vector2(350, 42)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 19
+placeholder_text = "Tu nombre aquí..."
+alignment = 1
+max_length = 20
+
+[node name="LabelError" type="Label" parent="NameContainer" unique_id=112555408]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.25, 0.25, 1)
+theme_override_font_sizes/font_size = 14
+text = "⚠  Debes escribir tu nombre para jugar ⚠  "
+horizontal_alignment = 1
+
+[node name="LabelJ2" type="Label" parent="NameContainer" unique_id=870667613]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.85, 1, 1)
+theme_override_font_sizes/font_size = 17
+text = "Nombre Jugador 2:"
+horizontal_alignment = 1
+
+[node name="NameInput2" type="LineEdit" parent="NameContainer" unique_id=1077489865]
+visible = false
+custom_minimum_size = Vector2(350, 42)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 19
+placeholder_text = "Nombre del jugador 2"
+alignment = 1
+max_length = 20
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=284770166]
+stream = ExtResource("3_h7a2f")
+autoplay = true

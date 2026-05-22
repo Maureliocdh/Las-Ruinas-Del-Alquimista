@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://c8jh7nwl7k5db"]
+
+[ext_resource type="Script" path="res://HistorialPartidas.gd" id="1_5x9qy"]
+
+[node name="HistorialPartidas" type="Control" unique_id=298124786]
+layout_mode = 3
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5x9qy")
+
+[node name="Panel" type="Panel" parent="." unique_id=2124847904]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2124847905]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -250.0
+offset_right = 400.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 15
+
+[node name="BackButton" type="Button" parent="VBoxContainer" unique_id=2124847922]
+layout_mode = 2
+text = "← Volver"

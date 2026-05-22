@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://diojogmqgr0pc"]
+
+[ext_resource type="Script" uid="uid://drny7ck1ufjiw" path="res://coin.gd" id="1_d5gmh"]
+[ext_resource type="AudioStream" uid="uid://cotor8bm648bp" path="res://Preview (mp3cut.net).wav" id="2_0t63x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d5gmh"]
+albedo_color = Color(1, 0.8854788, 0.43209988, 1)
+metallic = 1.0
+roughness = 0.3
+emission_enabled = true
+emission = Color(0.6260144, 0.5654917, 3.85046e-07, 1)
+emission_energy_multiplier = 6.1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_0t63x"]
+lightmap_size_hint = Vector2i(17, 4)
+height = 0.1
+radial_segments = 32
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_d5gmh"]
+
+[sub_resource type="Animation" id="Animation_v7riw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 1.5707964)]
+}
+
+[sub_resource type="Animation" id="Animation_0t63x"]
+resource_name = "giro moneda"
+length = 1.2333333
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("MeshInstance3D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array()
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.43333334, 0.6333333, 0.8333333, 1.0333333, 1.2333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 1.5707964), Vector3(0, 1.0471976, 1.5707964), Vector3(0, 2.0943952, 1.5707964), Vector3(0, 3.1415927, 1.5707964), Vector3(0, 4.1887903, 1.5707964), Vector3(0, 5.2359877, 1.5707964), Vector3(0, 6.2831855, 1.5707964)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v7riw"]
+_data = {
+&"RESET": SubResource("Animation_v7riw"),
+&"giro moneda": SubResource("Animation_0t63x")
+}
+
+[node name="Coin" type="Node3D" unique_id=498830362]
+script = ExtResource("1_d5gmh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=675375337]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_d5gmh")
+cast_shadow = 2
+mesh = SubResource("CylinderMesh_0t63x")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1941195178]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 2.476108, -0.0058686733)
+visible = false
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1592268832]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02493158, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1708349081]
+transform = Transform3D(0.3587407, 0, 0, 0, 1.0216569, 0, 0, 0, 1.0115776, 0.005941123, -0.0009818366, 0.0073364973)
+shape = SubResource("SphereShape3D_d5gmh")
+
+[node name="CoinSound" type="AudioStreamPlayer3D" parent="." unique_id=1327801973]
+stream = ExtResource("2_0t63x")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2026147778]
+libraries/ = SubResource("AnimationLibrary_v7riw")
