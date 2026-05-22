@@ -4,7 +4,7 @@
 
 ![Godot Engine](https://img.shields.io/badge/Godot-4.6-blue?style=flat-square&logo=godotengine)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
-![Platform](https://img.shields.io/badge/Platform-PC%20%7C%20Mobile-orange?style=flat-square)
+![Platform](https://img.shields.io/badge/Platform-PC%20%7C%20)
 
 **Un emocionante juego de aventura en 3D combinando plataformas, acción y puzzle**
 
@@ -325,8 +325,10 @@ copies of the Software...
 
 ## 👥 Créditos
 
-- **Desarrollador Principal**: [Tu Nombre]
-- **Arte y Diseño**: [Nombre del Artista]
+- **Desarrollador Principal**: Omar Said Aguilar Garcia
+                               Jose Andres Tovar Esparza
+                               Marco Aurelio Alejandro Cortes Diaz Hernandez 
+- **Arte y Diseño**: [IA]
 - **Audio**: Recursos de audio bajo licencia
 - **Motor**: Godot Engine Community
 
@@ -339,10 +341,8 @@ copies of the Software...
 
 ## 📞 Contacto y Soporte
 
-- **Issues**: GitHub Issues
-- **Email**: contacto@example.com
-- **Discord**: [Servidor de Discord]
-- **Twitter**: [@TuTwitter]
+- **Email**: marco.cortesdiaz559@alumnos.udg.mx
+
 
 ---
 
